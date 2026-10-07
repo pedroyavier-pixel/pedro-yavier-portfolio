@@ -52,3 +52,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+
+Excel, Word, PowerPoint: https://github.com/simple-icons/simple-icons/tree/11.0.0/icons (CC0).
+Premiere Pro, Photoshop, Canva PNG assets supplied by the portfolio owner.
