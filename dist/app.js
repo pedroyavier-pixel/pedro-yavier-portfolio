@@ -18,6 +18,7 @@ const projects=[
     ],
     "work": [
       "Estrategia y optimización de campañas en Meta Ads.",
+      "Campañas de retargeting y audiencias similares (lookalike) para conectar la promoción con públicos relevantes.",
       "Análisis de creativos, audiencias y costo por adquisición.",
       "Coordinación de la validación del seguimiento de compras.",
       "Libretos, contenido y email marketing para reactivación."
@@ -29,6 +30,115 @@ const projects=[
     "role": "Estrategia digital · Contenido · Meta Ads",
     "brandSub": "CREATIVIDAD + PERFORMANCE",
     "imageCredit": "Identidad oficial de Privé PR."
+  },
+  {
+    "id": "precision",
+    "name": "Precision Health Centers",
+    "category": "Salud",
+    "period": "2026",
+    "subtitle": "4× citas: tres meses de 2026 frente a todo 2025.",
+    "image": "precision-campaign.webp",
+    "visual": "contain white",
+    "badge": "4× citas · julio–septiembre 2026",
+    "headline": "De la visibilidad a las oportunidades de contacto y las citas.",
+    "summary": "Trabajo con Precision Health Centers como parte del equipo de la agencia JI Communications. Mi participación conecta la gestión de cuenta, la estrategia, el contenido y las campañas digitales para generar leads y apoyar la captación de citas.",
+    "stats": [
+      [
+        "4×",
+        "Citas · julio–septiembre 2026 vs. todo 2025"
+      ],
+      [
+        "+116%",
+        "Nuevos usuarios web"
+      ],
+      [
+        "439",
+        "Conversiones de Google Ads · llamadas + leads web"
+      ],
+      [
+        "$4.26",
+        "Costo por conversión"
+      ]
+    ],
+    "work": [
+      "Reuniones con el cliente, definición de objetivos y estrategia.",
+      "Planificación de contenido, calendario y seguimiento de entregables.",
+      "Coordinación creativa y ejecución de la comunicación digital.",
+      "Gestión y optimización de campañas de Meta Ads y Google Ads.",
+      "Contenido educativo, comunicación de servicios y análisis de resultados.",
+      "Participación en campañas de generación de leads y análisis de oportunidades de contacto, en coordinación con el equipo de la agencia."
+    ],
+    "impact": "Entre julio y septiembre de 2026, el equipo de la agencia alcanzó cuatro veces las citas registradas durante todo 2025. Mi participación abarca estrategia, contenido y medios digitales. En mayo, Google Ads registró 439 conversiones entre llamadas y leads web; los nuevos usuarios de la página web crecieron +116% frente a enero.",
+    "note": "",
+    "gallery": [
+      [
+        "precision-content.webp",
+        "Selección de contenidos incluida en la presentación de campaña."
+      ]
+    ],
+    "source": "https://precisionhealthpr.com",
+    "role": "Equipo de JI Communications · Estrategia · Contenido · Medios",
+    "thumbnail": "precision-thumbnail.webp",
+    "thumbnailBackground": "#ffffff"
+  },
+  {
+    "id": "cine",
+    "name": "Cine Teatro de Corozal",
+    "category": "Entretenimiento",
+    "period": "Desde 2021 · trayectoria reportada",
+    "subtitle": "Tres eventos con taquilla agotada.",
+    "image": "cine-fachada.webp",
+    "visual": "",
+    "badge": "3 eventos sold out",
+    "headline": "Contenido, campañas y experiencias que llenan la sala.",
+    "summary": "Construcción y gestión de la presencia digital del Cine Teatro Manuel Nieves Quintero. Integro contenido, diseño, campañas de tráfico y coordinación de eventos para promover la cartelera y las experiencias del teatro.",
+    "stats": [
+      [
+        "3",
+        "Eventos sold out"
+      ],
+      [
+        "193",
+        "Boletos vendidos · evento seleccionado"
+      ],
+      [
+        "$30",
+        "Inversión publicitaria · ese evento"
+      ]
+    ],
+    "work": [
+      "Reuniones con el cliente, definición de objetivos y estrategia.",
+      "Planificación de contenido, calendario y seguimiento de entregables.",
+      "Coordinación creativa y ejecución de la comunicación digital.",
+      "Creación de contenido, fotografía, video y edición.",
+      "Diseño de carteleras, promociones, menús y materiales para pantallas.",
+      "Coordinación de eventos y presentaciones con artistas y comediantes.",
+      "Gestión de actividades con Keropi Sánchez, Gianluca Perotti y Kiko Blade.",
+      "Activaciones para familias, encuentros con personajes y eventos temáticos.",
+      "Campañas de tráfico para promover eventos y optimización de presupuestos publicitarios reducidos."
+    ],
+    "impact": "Tres eventos alcanzaron taquilla agotada con el apoyo de campañas digitales. En uno de ellos se vendieron los 193 asientos de la sala, con un presupuesto publicitario de $30. La promoción digital se integra con el contenido, la propuesta artística y la coordinación del evento.",
+    "note": "",
+    "gallery": [
+      [
+        "cine-fachada.webp",
+        "Cine Teatro Manuel Nieves Quintero · Corozal."
+      ],
+      [
+        "cine-paw.webp",
+        "Diseño para redes · Programación familiar."
+      ],
+      [
+        "cine-padres.webp",
+        "Diseño y promoción de evento · Día de Padres."
+      ]
+    ],
+    "source": null,
+    "role": "Estrategia · Contenido · Publicidad digital · Eventos",
+    "imageCredit": "",
+    "thumbnail": "cine-thumbnail.webp",
+    "thumbnailBackground": "#1d1d1b",
+    "thumbnailFill": true
   },
   {
     "id": "jiqui",
@@ -182,106 +292,16 @@ const projects=[
     "galleryLabel": "Afiches de la película"
   },
   {
-    "id": "cine",
-    "name": "Cine Teatro de Corozal",
-    "category": "Entretenimiento",
-    "period": "Desde 2021 · trayectoria reportada",
-    "subtitle": "Construir una marca. Darle vida a una cartelera.",
-    "image": "cine-fachada.webp",
-    "visual": "",
-    "badge": "Marca · contenido · experiencias",
-    "headline": "Mucho más que anunciar una película.",
-    "summary": "Construcción y gestión de la presencia digital del Cine Teatro Manuel Nieves Quintero. Un trabajo que une cartelera, contenido, publicidad y producción de experiencias para públicos de distintas edades.",
-    "stats": [],
-    "work": [
-      "Reuniones con el cliente, definición de objetivos y estrategia.",
-      "Planificación de contenido, calendario y seguimiento de entregables.",
-      "Coordinación creativa y ejecución de la comunicación digital.",
-      "Creación de contenido, fotografía, video y edición.",
-      "Diseño de carteleras, promociones, menús y materiales para pantallas.",
-      "Coordinación de eventos y presentaciones con artistas y comediantes.",
-      "Gestión de actividades con Keropi Sánchez, Gianluca Perotti y Kiko Blade.",
-      "Activaciones para familias, encuentros con personajes y eventos temáticos."
-    ],
-    "impact": "Una marca con programación que va más allá de las películas: experiencias, comedia, artistas y actividades que generan nuevos motivos para visitar el Cine Teatro.",
-    "note": "",
-    "gallery": [
-      [
-        "cine-fachada.webp",
-        "Cine Teatro Manuel Nieves Quintero · Corozal."
-      ],
-      [
-        "cine-paw.webp",
-        "Diseño para redes · Programación familiar."
-      ],
-      [
-        "cine-padres.webp",
-        "Diseño y promoción de evento · Día de Padres."
-      ]
-    ],
-    "source": null,
-    "role": "Estrategia · Contenido · Diseño · Eventos",
-    "imageCredit": "",
-    "thumbnail": "cine-thumbnail.webp",
-    "thumbnailBackground": "#1d1d1b",
-    "thumbnailFill": true
-  },
-  {
-    "id": "precision",
-    "name": "Precision Health Centers",
-    "category": "Salud",
-    "period": "2026",
-    "subtitle": "Comunicación que acerca servicios de salud a más personas.",
-    "image": "precision-campaign.webp",
-    "visual": "contain white",
-    "badge": "+116% de nuevos usuarios web",
-    "headline": "Hacer visible el cuidado. Facilitar el próximo paso.",
-    "summary": "Gestión de cuenta que conecta la relación con el cliente, los objetivos de negocio, la planificación de contenido y los medios digitales. Un trabajo orientado a comunicar servicios de salud y generar oportunidades de contacto.",
-    "stats": [
-      [
-        "+116%",
-        "Nuevos usuarios web"
-      ],
-      [
-        "439",
-        "Conversiones de Google Ads"
-      ],
-      [
-        "$4.26",
-        "Costo por conversión"
-      ]
-    ],
-    "work": [
-      "Reuniones con el cliente, definición de objetivos y estrategia.",
-      "Planificación de contenido, calendario y seguimiento de entregables.",
-      "Coordinación creativa y ejecución de la comunicación digital.",
-      "Gestión y optimización de campañas de Meta Ads y Google Ads.",
-      "Contenido educativo, comunicación de servicios y análisis de resultados."
-    ],
-    "impact": "En mayo de 2026, el reporte documentó más del doble de nuevos usuarios web frente a enero. Google Ads registró 439 conversiones entre llamadas y leads web durante mayo.",
-    "note": "",
-    "gallery": [
-      [
-        "precision-content.webp",
-        "Selección de contenidos incluida en la presentación de campaña."
-      ]
-    ],
-    "source": "https://precisionhealthpr.com",
-    "role": "Ejecutivo de cuentas · Estrategia · Contenido · Medios",
-    "thumbnail": "precision-thumbnail.webp",
-    "thumbnailBackground": "#ffffff"
-  },
-  {
     "id": "multiples",
     "name": "Cooperativa de Seguros Múltiples",
     "category": "Seguros",
     "period": "Participación desde 2022",
-    "subtitle": "Consistencia de marca, de la idea a la ejecución.",
+    "subtitle": "Contenido de marca y campañas de generación de leads.",
     "image": "seguros-campaign.webp",
     "visual": "contain white",
-    "badge": "Estrategia · contenido · coordinación",
-    "headline": "Una marca de confianza, en cada punto de contacto.",
-    "summary": "Gestión de cuenta y comunicación para Cooperativa de Seguros Múltiples: reuniones con el cliente, definición de objetivos, desarrollo de estrategias, planificación de contenido y coordinación de la ejecución.",
+    "badge": "Contenido · Generación de leads",
+    "headline": "Una marca de confianza que también genera oportunidades de contacto.",
+    "summary": "Trabajo con Cooperativa de Seguros Múltiples dentro del equipo de la agencia: relación con el cliente, objetivos, estrategia, planificación de contenido y participación en campañas de generación de leads.",
     "stats": [],
     "work": [
       "Reuniones con el cliente, definición de objetivos y estrategia.",
@@ -289,13 +309,14 @@ const projects=[
       "Coordinación creativa y ejecución de la comunicación digital.",
       "Desarrollo de copy y contenido institucional, educativo y de productos.",
       "Coordinación con producción, diseño y suplidores.",
-      "Seguimiento de campañas y presentación de resultados."
+      "Seguimiento de campañas y presentación de resultados.",
+      "Participación en campañas digitales de generación de leads para productos y servicios de seguros."
     ],
-    "impact": "Experiencia trabajando la consistencia de una marca de seguros en temas institucionales, productos, responsabilidad social y comunicación educativa.",
+    "impact": "Comunicación institucional, educativa y de productos conectada con campañas para captar personas interesadas y generar oportunidades de contacto con la marca.",
     "note": "",
     "gallery": [],
     "source": "https://www.segurosmultiples.com",
-    "role": "Ejecutivo de cuentas · Estrategia · Contenido",
+    "role": "Equipo de agencia · Estrategia · Contenido · Generación de leads",
     "imageCredit": "Imagen institucional publicada en el sitio oficial de Seguros Múltiples. Referencia de la marca.",
     "thumbnail": "multiples-thumbnail.webp",
     "thumbnailBackground": "#ffffff"
@@ -686,31 +707,33 @@ const projects=[
     "id": "smilefix",
     "name": "Smile Fix",
     "category": "Salud",
-    "period": "Experiencia de cuenta",
-    "role": "Trabajo de cuenta · Contenido · Coordinación",
-    "subtitle": "Estrategia y comunicación conectadas al cliente.",
+    "period": "Colaboración en agencia · finalizada",
+    "role": "Colaboración en agencia · Contenido · Generación de leads",
+    "subtitle": "Campañas para captar personas interesadas en servicios dentales.",
     "image": "",
     "visual": "word",
     "brandSub": "SALUD · PUERTO RICO",
-    "headline": "Estrategia y comunicación conectadas al cliente.",
-    "summary": "Experiencia de trabajo con Smile Fix, dentro de una trayectoria que integra relación con el cliente, planificación, contenido y ejecución.",
+    "headline": "Generación de leads para acercar pacientes potenciales a la marca.",
+    "summary": "Durante mi colaboración con Smile Fix, trabajé con el equipo de la agencia integrando estrategia, contenido y campañas digitales de generación de leads para servicios dentales.",
     "stats": [],
     "work": [
       "Reuniones con el cliente, definición de objetivos y estrategia.",
       "Planificación de contenido, calendario y seguimiento de entregables.",
-      "Coordinación creativa y ejecución de la comunicación digital."
+      "Coordinación creativa y ejecución de la comunicación digital.",
+      "Participación en campañas de generación de leads y seguimiento del desempeño de la comunicación digital."
     ],
-    "impact": "Alinear objetivos, mensajes y entregables para dar continuidad a la comunicación de la marca.",
-    "note": "",
+    "impact": "Campañas enfocadas en generar oportunidades de contacto para servicios dentales, conectando el mensaje de marca con el interés de pacientes potenciales.",
+    "note": "Colaboración finalizada.",
     "gallery": [],
     "source": null,
     "thumbnail": "smilefix-thumbnail.webp",
-    "thumbnailBackground": "#ffffff"
+    "thumbnailBackground": "#ffffff",
+    "badge": "Publicidad digital · Generación de leads"
   }
 ];
-const services=[["Estrategia de marketing", "Diagnóstico de marca, posicionamiento, objetivos, planificación de campañas y planes de contenido."], ["Creación & optimización de cuentas", "Configuración de presencia digital, perfiles comerciales, organización de activos y optimización de cuentas."], ["Social media & comunidad", "Gestión de redes, calendarios editoriales, programación, community management y crecimiento de comunidad."], ["Meta Ads & Google Ads", "Planificación, compra y optimización de medios; segmentación, retargeting, presupuestos y seguimiento de campañas."], ["Dirección creativa & diseño", "Conceptos de campaña, identidad visual, artes para redes, anuncios, menús, rotulación y materiales impresos."], ["Copywriting & guiones", "Textos de marca, anuncios, guiones para video, mensajes de campaña y contenido que conecta con cada audiencia."], ["Fotografía, video & edición", "Producción de contenido, fotografía de producto, grabación, edición audiovisual y adaptaciones para redes."], ["Email marketing", "Diseño de emails, redacción, segmentación de contactos y campañas de reactivación y comunicación."], ["Medición & resultados", "Reportes, dashboards, análisis de KPI, ROAS y costo por adquisición para orientar las próximas decisiones."], ["Producción de eventos & livestream", "Coordinación de premieres, festivales, activaciones, artistas y suplidores. Producción y transmisiones en vivo."], ["Gestión de cuentas & clientes", "Reuniones con clientes, definición de objetivos, estrategias, planificación, coordinación de equipos y seguimiento de entregables."], ["IA aplicada a marketing & producción", "Uso de inteligencia artificial para investigar, desarrollar conceptos y guiones, crear y editar contenido visual, analizar información y agilizar la planificación y producción de campañas."]];
+const services=[["Estrategia de marketing", "Diagnóstico de marca, posicionamiento, objetivos, planificación de campañas y planes de contenido."], ["Creación & optimización de cuentas", "Configuración de presencia digital, perfiles comerciales, organización de activos y optimización de cuentas."], ["Social media & comunidad", "Gestión de redes, calendarios editoriales, programación, community management y crecimiento de comunidad."], ["Meta Ads & Google Ads", "Campañas para generar leads, compras y visitas; segmentación, retargeting, audiencias similares (lookalike) y optimización de inversión en Meta Ads y Google Ads."], ["Dirección creativa & diseño", "Conceptos de campaña, identidad visual, artes para redes, anuncios, menús, rotulación y materiales impresos."], ["Copywriting & guiones", "Textos de marca, anuncios, guiones para video, mensajes de campaña y contenido que conecta con cada audiencia."], ["Fotografía, video & edición", "Producción de contenido, fotografía de producto, grabación, edición audiovisual y adaptaciones para redes."], ["Email marketing", "Diseño de emails, redacción, segmentación de contactos y campañas de reactivación y comunicación."], ["Medición & resultados", "Reportes, dashboards, análisis de KPI, ROAS y costo por adquisición para orientar las próximas decisiones."], ["Producción de eventos & livestream", "Coordinación de premieres, festivales, activaciones, artistas y suplidores. Producción y transmisiones en vivo."], ["Gestión de cuentas & clientes", "Reuniones con clientes, definición de objetivos, estrategias, planificación, coordinación de equipos y seguimiento de entregables."], ["IA aplicada a marketing & producción", "Uso de inteligencia artificial para investigar, desarrollar conceptos y guiones, crear y editar contenido visual, analizar información y agilizar la planificación y producción de campañas."]];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const results=[['6.98x','ROAS para compras digitales','Campaña seleccionada · septiembre 2026'],['+178%','Crecimiento de comunidad en redes sociales','Crecimiento acumulado durante la gestión'],['+116%','Nuevos usuarios en páginas web','Comparación mensual · mayo vs. enero 2026'],['1–5','Reservaciones de cumpleaños por fin de semana','Frecuencia reportada por el negocio']];
+const results=[["6.98×", "ROAS para compras digitales", "Campaña seleccionada · septiembre 2026"], ["4×", "Citas frente a todo 2025", "Julio–septiembre 2026 · resultado en equipo"], ["3", "Eventos con taquilla agotada", "Campañas digitales para promover eventos"], ["+178%", "Crecimiento de comunidad en redes sociales", "Crecimiento acumulado durante la gestión"]];
 document.querySelector('#resultados').innerHTML=results.map(r=>`<article class="result"><strong>${r[0]}</strong><h3>${r[1]}</h3><p>${r[2]}</p></article>`).join('');
 document.querySelector('.services').innerHTML=services.map((s,i)=>`<article><span>${String(i+1).padStart(2,'0')}</span><h3>${s[0]}</h3><p>${s[1]}</p></article>`).join('');
 const categories=['Todos',...new Set(projects.map(p=>p.category))];
