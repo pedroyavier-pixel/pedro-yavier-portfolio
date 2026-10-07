@@ -23,7 +23,7 @@ const projects=[
       "Libretos, contenido y email marketing para reactivación."
     ],
     "impact": "Una campaña de compras digitales alcanzó 6.98x de ROAS entre el 8 y el 12 de septiembre de 2026. La estrategia combinó evaluación de creativos, optimización de medios y seguimiento de las conversiones.",
-    "note": "ROAS de una campaña seleccionada, 8–12 sep. 2026. Representa valor de compras atribuido por cada dólar publicitario; no es utilidad neta ni el promedio de toda la cuenta.",
+    "note": "",
     "gallery": [],
     "source": "https://prprive.com",
     "role": "Estrategia digital · Contenido · Meta Ads",
@@ -66,7 +66,7 @@ const projects=[
       "Campañas digitales orientadas a visitas y reservas de cumpleaños."
     ],
     "impact": "La comunidad creció un 177.8%. La actividad de cumpleaños pasó de aproximadamente una celebración mensual a entre una y cinco por fin de semana, según el seguimiento del negocio compartido por Pedro.",
-    "note": "Crecimiento de comunidad redondeado a +178%, según las cifras históricas compartidas por Pedro. Frecuencia de cumpleaños reportada por el negocio; no equivale a un porcentaje auditado de crecimiento.",
+    "note": "",
     "gallery": [
       [
         "jiqui-food.webp",
@@ -166,7 +166,7 @@ const projects=[
       "Planificación publicitaria y adaptaciones de comunicación por mercado."
     ],
     "impact": "Continuidad entre producción, eventos y promoción: documentar el proceso, coordinar la experiencia del estreno y mantener activa la conversación digital alrededor de la película.",
-    "note": "Los afiches identifican la película. Mi rol abarca BTS, eventos y comunicación; no implica autoría de los afiches.",
+    "note": "",
     "gallery": [
       [
         "perla-poster.webp",
@@ -204,7 +204,7 @@ const projects=[
       "Activaciones para familias, encuentros con personajes y eventos temáticos."
     ],
     "impact": "Una marca con programación que va más allá de las películas: experiencias, comedia, artistas y actividades que generan nuevos motivos para visitar el Cine Teatro.",
-    "note": "Selección de piezas originales de contenido y diseño. La colaboración incluye comunicación y coordinación de eventos.",
+    "note": "",
     "gallery": [
       [
         "cine-fachada.webp",
@@ -259,7 +259,7 @@ const projects=[
       "Contenido educativo, comunicación de servicios y análisis de resultados."
     ],
     "impact": "En mayo de 2026, el reporte documentó más del doble de nuevos usuarios web frente a enero. Google Ads registró 439 conversiones entre llamadas y leads web durante mayo.",
-    "note": "Fuente: presentación de resultados de la cuenta. +116.2% calculado con 20,223 nuevos usuarios en mayo vs. 9,352 en enero de 2026. Conversiones de Google Ads: llamadas + leads web, no pacientes confirmados. El banner identifica la campaña de la marca; no implica autoría individual de todos sus elementos.",
+    "note": "",
     "gallery": [
       [
         "precision-content.webp",
@@ -292,7 +292,7 @@ const projects=[
       "Seguimiento de campañas y presentación de resultados."
     ],
     "impact": "Experiencia trabajando la consistencia de una marca de seguros en temas institucionales, productos, responsabilidad social y comunicación educativa.",
-    "note": "Trayectoria en la cuenta desde 2022. La identidad y las imágenes de marca pertenecen a Seguros Múltiples.",
+    "note": "",
     "gallery": [],
     "source": "https://www.segurosmultiples.com",
     "role": "Ejecutivo de cuentas · Estrategia · Contenido",
@@ -352,7 +352,7 @@ const projects=[
       "Diseño de menús, banners y materiales promocionales."
     ],
     "impact": "Un lenguaje visual y verbal para conectar los productos, el ambiente y la experiencia de visita durante el periodo de colaboración.",
-    "note": "Colaboración 2022–2024. Este caso corresponde a ese periodo y no representa gestión actual de la marca.",
+    "note": "Colaboración finalizada: 2022–2024.",
     "gallery": [
       [
         "canela-cremas.webp",
@@ -392,7 +392,7 @@ const projects=[
       "Desarrollo de campañas y contenido promocional."
     ],
     "impact": "Una presencia visual construida alrededor de sus platos y productos, con fotografía, video y campañas que comunicaban la propuesta gastronómica de White House Cuisine.",
-    "note": "Trabajo realizado durante 2020–2021. Las fotografías de esta galería forman parte de mi trabajo con la marca.",
+    "note": "Colaboración finalizada: 2020–2021.",
     "gallery": [
       [
         "white-house-plato-aguacate.webp",
@@ -452,7 +452,7 @@ const projects=[
       "Creación de contenido digital para presentar la propuesta gastronómica."
     ],
     "impact": "Una presencia digital creada para acompañar la llegada de la marca al mercado.",
-    "note": "",
+    "note": "Colaboración finalizada: 6 meses entre 2024 y 2025.",
     "gallery": [
       [
         "pizza-magna-logo.webp",
@@ -484,7 +484,7 @@ const projects=[
       "Gestión de campañas publicitarias en Meta Ads."
     ],
     "impact": "Un trabajo de comunicación que conecta el concepto de la obra con su promoción digital.",
-    "note": "Caso de contenido y publicidad de la campaña, sin atribución de resultados de taquilla.",
+    "note": "",
     "gallery": [
       [
         "el-favor.webp",
@@ -514,7 +514,7 @@ const projects=[
       "Seguimiento de contenido y entregables de la marca."
     ],
     "impact": "Un mismo criterio creativo en contenido, eventos y livestream, para extender la experiencia de la marca dentro y fuera de las redes sociales.",
-    "note": "Identidad oficial de Island Hub, utilizada para identificar el proyecto.",
+    "note": "",
     "gallery": [],
     "source": null,
     "role": "Contenido · Producción de eventos · Livestream",
@@ -541,7 +541,7 @@ const projects=[
       "Coordinación de piezas y seguimiento de la comunicación de marca."
     ],
     "impact": "Experiencia adaptando la comunicación de marca a un sector donde la claridad y la confianza son esenciales.",
-    "note": "La fotografía o identidad de la marca se utiliza para identificar la cuenta.",
+    "note": "",
     "gallery": [
       [
         "dental-solutions-photo.webp",
@@ -572,7 +572,7 @@ const projects=[
       "Coordinación de entregables con la producción."
     ],
     "impact": "Un trabajo que conecta la promoción del festival con los materiales que acompañan su realización.",
-    "note": "Participación documentada en la edición de 2026; el alcance se refiere a comunicación y entregables audiovisuales.",
+    "note": "",
     "gallery": [],
     "source": "https://soysilverpr.com/pa-que-goces/cultura/se-te-antoja-un-pastelito-de-arroz/",
     "imageCredit": "Cartelera pública del evento de 2026. Referencia del proyecto; no se atribuye autoría de esta pieza.",
@@ -624,7 +624,7 @@ const projects=[
       "Desarrollo de mensajes y contenido del Seguro Obligatorio."
     ],
     "impact": "Un trabajo enfocado en comunicar una oferta de seguros con claridad y consistencia de marca.",
-    "note": "Experiencia de cuenta dentro de Seguros Múltiples.",
+    "note": "",
     "gallery": [],
     "source": "https://www.segurosmultiples.com",
     "role": "Ejecutivo de cuentas · Contenido · Estrategia",
