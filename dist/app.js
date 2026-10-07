@@ -7,13 +7,13 @@ const projects=[
     "subtitle": "Creatividad que se convierte en compras.",
     "image": "prive-logo.svg",
     "visual": "logo black",
-    "badge": "6.98x ROAS · campaña seleccionada",
+    "badge": "698% ROAS · campaña seleccionada",
     "headline": "Una idea atractiva. Una estrategia que convierte.",
     "summary": "Estrategia digital y compra de medios para una promoción de artes digitales. Creativos, audiencias y medición conectados alrededor de un objetivo: generar compras con eficiencia.",
     "stats": [
       [
-        "6.98x",
-        "ROAS para compras digitales"
+        "698%",
+        "ROAS para compras digitales · equivalente a 6.98×"
       ]
     ],
     "work": [
@@ -23,7 +23,7 @@ const projects=[
       "Coordinación de la validación del seguimiento de compras.",
       "Libretos, contenido y email marketing para reactivación."
     ],
-    "impact": "Una campaña de compras digitales alcanzó 6.98x de ROAS entre el 8 y el 12 de septiembre de 2026. La estrategia combinó evaluación de creativos, optimización de medios y seguimiento de las conversiones.",
+    "impact": "Una campaña de compras digitales alcanzó 698% de ROAS (6.98×) entre el 8 y el 12 de septiembre de 2026. La estrategia combinó evaluación de creativos, optimización de medios y seguimiento de las conversiones.",
     "note": "",
     "gallery": [],
     "source": "https://prprive.com",
@@ -36,16 +36,16 @@ const projects=[
     "name": "Precision Health Centers",
     "category": "Salud",
     "period": "2026",
-    "subtitle": "4× citas: tres meses de 2026 frente a todo 2025.",
+    "subtitle": "+300% en citas: julio–septiembre de 2026 frente a todo 2025.",
     "image": "precision-campaign.webp",
     "visual": "contain white",
-    "badge": "4× citas · julio–septiembre 2026",
+    "badge": "+300% en citas · julio–septiembre 2026",
     "headline": "De la visibilidad a las oportunidades de contacto y las citas.",
     "summary": "Trabajo con Precision Health Centers como parte del equipo de la agencia JI Communications. Mi participación conecta la gestión de cuenta, la estrategia, el contenido y las campañas digitales para generar leads y apoyar la captación de citas.",
     "stats": [
       [
-        "4×",
-        "Citas · julio–septiembre 2026 vs. todo 2025"
+        "+300%",
+        "Incremento de citas · julio–septiembre 2026 vs. todo 2025"
       ],
       [
         "+116%",
@@ -68,7 +68,7 @@ const projects=[
       "Contenido educativo, comunicación de servicios y análisis de resultados.",
       "Participación en campañas de generación de leads y análisis de oportunidades de contacto, en coordinación con el equipo de la agencia."
     ],
-    "impact": "Entre julio y septiembre de 2026, el equipo de la agencia alcanzó cuatro veces las citas registradas durante todo 2025. Mi participación abarca estrategia, contenido y medios digitales. En mayo, Google Ads registró 439 conversiones entre llamadas y leads web; los nuevos usuarios de la página web crecieron +116% frente a enero.",
+    "impact": "Entre julio y septiembre de 2026, el equipo de la agencia alcanzó cuatro veces las citas registradas durante todo 2025: un incremento del 300%. Mi participación abarca estrategia, contenido y medios digitales. En mayo, Google Ads registró 439 conversiones entre llamadas y leads web; los nuevos usuarios de la página web crecieron +116% frente a enero.",
     "note": "",
     "gallery": [
       [
@@ -86,16 +86,16 @@ const projects=[
     "name": "Cine Teatro de Corozal",
     "category": "Entretenimiento",
     "period": "Desde 2021 · trayectoria reportada",
-    "subtitle": "Tres eventos con taquilla agotada.",
+    "subtitle": "Campañas que apoyan eventos con la sala llena.",
     "image": "cine-fachada.webp",
     "visual": "",
-    "badge": "3 eventos sold out",
-    "headline": "Contenido, campañas y experiencias que llenan la sala.",
+    "badge": "100% de ocupación · evento seleccionado",
+    "headline": "Promoción digital para llenar la sala.",
     "summary": "Construcción y gestión de la presencia digital del Cine Teatro Manuel Nieves Quintero. Integro contenido, diseño, campañas de tráfico y coordinación de eventos para promover la cartelera y las experiencias del teatro.",
     "stats": [
       [
-        "3",
-        "Eventos sold out"
+        "100%",
+        "Ocupación de la sala · evento seleccionado"
       ],
       [
         "193",
@@ -117,7 +117,7 @@ const projects=[
       "Activaciones para familias, encuentros con personajes y eventos temáticos.",
       "Campañas de tráfico para promover eventos y optimización de presupuestos publicitarios reducidos."
     ],
-    "impact": "Tres eventos alcanzaron taquilla agotada con el apoyo de campañas digitales. En uno de ellos se vendieron los 193 asientos de la sala, con un presupuesto publicitario de $30. La promoción digital se integra con el contenido, la propuesta artística y la coordinación del evento.",
+    "impact": "La publicidad digital ha apoyado eventos que alcanzaron taquilla agotada. En un evento seleccionado se vendieron los 193 asientos de la sala: 100% de ocupación, con un presupuesto publicitario de $30. La promoción digital se integra con el contenido, la propuesta artística y la coordinación del evento.",
     "note": "",
     "gallery": [
       [
@@ -175,7 +175,7 @@ const projects=[
       "Comunicación y contenido para festivales, karaoke y eventos, incluido el Festival de la Greca.",
       "Campañas digitales orientadas a visitas y reservas de cumpleaños."
     ],
-    "impact": "La comunidad creció un 177.8%. La actividad de cumpleaños pasó de aproximadamente una celebración mensual a entre una y cinco por fin de semana, según el seguimiento del negocio compartido por Pedro.",
+    "impact": "La comunidad creció un 177.8%. La actividad de cumpleaños pasó de aproximadamente una celebración mensual a entre una y cinco por fin de semana, según el seguimiento del negocio compartido por Pedro. La publicidad contribuyó a ampliar la clientela y atraer visitantes de distintas partes de Puerto Rico.",
     "note": "",
     "gallery": [
       [
@@ -372,7 +372,7 @@ const projects=[
       "Fotografía de producto y contenido gastronómico.",
       "Diseño de menús, banners y materiales promocionales."
     ],
-    "impact": "Un lenguaje visual y verbal para conectar los productos, el ambiente y la experiencia de visita durante el periodo de colaboración.",
+    "impact": "Un lenguaje visual y verbal para conectar los productos, el ambiente y la experiencia de visita durante el periodo de colaboración. La publicidad contribuyó a ampliar la clientela y atraer visitantes de distintas partes de Puerto Rico.",
     "note": "Colaboración finalizada: 2022–2024.",
     "gallery": [
       [
@@ -412,7 +412,7 @@ const projects=[
       "Producción de videos para su comunicación digital.",
       "Desarrollo de campañas y contenido promocional."
     ],
-    "impact": "Una presencia visual construida alrededor de sus platos y productos, con fotografía, video y campañas que comunicaban la propuesta gastronómica de White House Cuisine.",
+    "impact": "Una presencia visual construida alrededor de sus platos y productos, con fotografía, video y campañas que comunicaban la propuesta gastronómica de White House Cuisine. La publicidad contribuyó a ampliar la clientela y atraer visitantes de distintas partes de Puerto Rico.",
     "note": "Colaboración finalizada: 2020–2021.",
     "gallery": [
       [
@@ -472,7 +472,7 @@ const projects=[
       "Gestión de perfiles y planificación de publicaciones.",
       "Creación de contenido digital para presentar la propuesta gastronómica."
     ],
-    "impact": "Una presencia digital creada para acompañar la llegada de la marca al mercado.",
+    "impact": "Una presencia digital creada para acompañar la llegada de la marca al mercado. La publicidad contribuyó a ampliar la clientela y atraer visitantes de distintas partes de Puerto Rico.",
     "note": "Colaboración finalizada: 6 meses entre 2024 y 2025.",
     "gallery": [
       [
@@ -733,7 +733,7 @@ const projects=[
 ];
 const services=[["Estrategia de marketing", "Diagnóstico de marca, posicionamiento, objetivos, planificación de campañas y planes de contenido."], ["Creación & optimización de cuentas", "Configuración de presencia digital, perfiles comerciales, organización de activos y optimización de cuentas."], ["Social media & comunidad", "Gestión de redes, calendarios editoriales, programación, community management y crecimiento de comunidad."], ["Meta Ads & Google Ads", "Campañas para generar leads, compras y visitas; segmentación, retargeting, audiencias similares (lookalike) y optimización de inversión en Meta Ads y Google Ads."], ["Dirección creativa & diseño", "Conceptos de campaña, identidad visual, artes para redes, anuncios, menús, rotulación y materiales impresos."], ["Copywriting & guiones", "Textos de marca, anuncios, guiones para video, mensajes de campaña y contenido que conecta con cada audiencia."], ["Fotografía, video & edición", "Producción de contenido, fotografía de producto, grabación, edición audiovisual y adaptaciones para redes."], ["Email marketing", "Diseño de emails, redacción, segmentación de contactos y campañas de reactivación y comunicación."], ["Medición & resultados", "Reportes, dashboards, análisis de KPI, ROAS y costo por adquisición para orientar las próximas decisiones."], ["Producción de eventos & livestream", "Coordinación de premieres, festivales, activaciones, artistas y suplidores. Producción y transmisiones en vivo."], ["Gestión de cuentas & clientes", "Reuniones con clientes, definición de objetivos, estrategias, planificación, coordinación de equipos y seguimiento de entregables."], ["IA aplicada a marketing & producción", "Uso de inteligencia artificial para investigar, desarrollar conceptos y guiones, crear y editar contenido visual, analizar información y agilizar la planificación y producción de campañas."]];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const results=[["6.98×", "ROAS para compras digitales", "Campaña seleccionada · septiembre 2026"], ["4×", "Citas frente a todo 2025", "Julio–septiembre 2026 · resultado en equipo"], ["3", "Eventos con taquilla agotada", "Campañas digitales para promover eventos"], ["+178%", "Crecimiento de comunidad en redes sociales", "Crecimiento acumulado durante la gestión"]];
+const results=[["698%", "ROAS para compras digitales", "Equivale a 6.98× · campaña seleccionada"], ["+300%", "Crecimiento de citas", "Julio–septiembre 2026 vs. todo 2025 · equipo"], ["100%", "Ocupación de la sala", "Evento seleccionado · 193 asientos vendidos"], ["+178%", "Crecimiento de comunidad en redes sociales", "Crecimiento acumulado durante la gestión"]];
 document.querySelector('#resultados').innerHTML=results.map(r=>`<article class="result"><strong>${r[0]}</strong><h3>${r[1]}</h3><p>${r[2]}</p></article>`).join('');
 document.querySelector('.services').innerHTML=services.map((s,i)=>`<article><span>${String(i+1).padStart(2,'0')}</span><h3>${s[0]}</h3><p>${s[1]}</p></article>`).join('');
 const categories=['Todos',...new Set(projects.map(p=>p.category))];
