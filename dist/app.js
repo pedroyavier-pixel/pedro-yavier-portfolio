@@ -98,10 +98,6 @@ const projects=[
         "Ocupación de la sala · evento seleccionado"
       ],
       [
-        "193",
-        "Boletos vendidos · evento seleccionado"
-      ],
-      [
         "$30",
         "Inversión publicitaria · ese evento"
       ]
@@ -117,7 +113,7 @@ const projects=[
       "Activaciones para familias, encuentros con personajes y eventos temáticos.",
       "Campañas de tráfico para promover eventos y optimización de presupuestos publicitarios reducidos."
     ],
-    "impact": "La publicidad digital ha apoyado eventos que alcanzaron taquilla agotada. En un evento seleccionado se vendieron los 193 asientos de la sala: 100% de ocupación, con un presupuesto publicitario de $30. La promoción digital se integra con el contenido, la propuesta artística y la coordinación del evento.",
+    "impact": "La publicidad digital ha apoyado eventos que alcanzaron taquilla agotada. Un evento seleccionado alcanzó el 100% de ocupación con un presupuesto publicitario de $30. La promoción digital se integra con el contenido, la propuesta artística y la coordinación del evento.",
     "note": "",
     "gallery": [
       [
@@ -733,7 +729,7 @@ const projects=[
 ];
 const services=[["Estrategia de marketing", "Diagnóstico de marca, posicionamiento, objetivos, planificación de campañas y planes de contenido."], ["Creación & optimización de cuentas", "Configuración de presencia digital, perfiles comerciales, organización de activos y optimización de cuentas."], ["Social media & comunidad", "Gestión de redes, calendarios editoriales, programación, community management y crecimiento de comunidad."], ["Meta Ads & Google Ads", "Campañas para generar leads, compras y visitas; segmentación, retargeting, audiencias similares (lookalike) y optimización de inversión en Meta Ads y Google Ads."], ["Dirección creativa & diseño", "Conceptos de campaña, identidad visual, artes para redes, anuncios, menús, rotulación y materiales impresos."], ["Copywriting & guiones", "Textos de marca, anuncios, guiones para video, mensajes de campaña y contenido que conecta con cada audiencia."], ["Fotografía, video & edición", "Producción de contenido, fotografía de producto, grabación, edición audiovisual y adaptaciones para redes."], ["Email marketing", "Diseño de emails, redacción, segmentación de contactos y campañas de reactivación y comunicación."], ["Medición & resultados", "Reportes, dashboards, análisis de KPI, ROAS y costo por adquisición para orientar las próximas decisiones."], ["Producción de eventos & livestream", "Coordinación de premieres, festivales, activaciones, artistas y suplidores. Producción y transmisiones en vivo."], ["Gestión de cuentas & clientes", "Reuniones con clientes, definición de objetivos, estrategias, planificación, coordinación de equipos y seguimiento de entregables."], ["IA aplicada a marketing & producción", "Uso de inteligencia artificial para investigar, desarrollar conceptos y guiones, crear y editar contenido visual, analizar información y agilizar la planificación y producción de campañas."]];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const results=[["6.98×", "ROAS para compras digitales", "Campaña seleccionada · septiembre 2026"], ["+300%", "Crecimiento de citas", "Julio–septiembre 2026 vs. todo 2025 · equipo"], ["100%", "Ocupación de la sala", "Evento seleccionado · 193 asientos vendidos"], ["+178%", "Crecimiento de comunidad en redes sociales", "Crecimiento acumulado durante la gestión"]];
+const results=[["6.98×", "ROAS para compras digitales", "Campaña seleccionada · septiembre 2026"], ["+300%", "Crecimiento de citas", "Julio–septiembre 2026 vs. todo 2025 · equipo"], ["100%", "Ocupación de la sala", "Campañas para eventos · presupuesto optimizado"], ["+178%", "Crecimiento de comunidad en redes sociales", "Crecimiento acumulado durante la gestión"]];
 document.querySelector('#resultados').innerHTML=results.map(r=>`<article class="result"><strong>${r[0]}</strong><h3>${r[1]}</h3><p>${r[2]}</p></article>`).join('');
 document.querySelector('.services').innerHTML=services.map((s,i)=>`<article><span>${String(i+1).padStart(2,'0')}</span><h3>${s[0]}</h3><p>${s[1]}</p></article>`).join('');
 const categories=['Todos',...new Set(projects.map(p=>p.category))];
