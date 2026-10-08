@@ -7,13 +7,13 @@ const projects=[
     "subtitle": "Creatividad que se convierte en compras.",
     "image": "prive-logo.svg",
     "visual": "logo black",
-    "badge": "698% ROAS · campaña seleccionada",
+    "badge": "6.98× ROAS · campaña seleccionada",
     "headline": "Una idea atractiva. Una estrategia que convierte.",
     "summary": "Estrategia digital y compra de medios para una promoción de artes digitales. Creativos, audiencias y medición conectados alrededor de un objetivo: generar compras con eficiencia.",
     "stats": [
       [
-        "698%",
-        "ROAS para compras digitales · equivalente a 6.98×"
+        "6.98×",
+        "ROAS para compras digitales"
       ]
     ],
     "work": [
@@ -23,7 +23,7 @@ const projects=[
       "Coordinación de la validación del seguimiento de compras.",
       "Libretos, contenido y email marketing para reactivación."
     ],
-    "impact": "Una campaña de compras digitales alcanzó 698% de ROAS (6.98×) entre el 8 y el 12 de septiembre de 2026. La estrategia combinó evaluación de creativos, optimización de medios y seguimiento de las conversiones.",
+    "impact": "Una campaña de compras digitales alcanzó 6.98× de ROAS entre el 8 y el 12 de septiembre de 2026. La estrategia combinó evaluación de creativos, optimización de medios y seguimiento de las conversiones.",
     "note": "",
     "gallery": [],
     "source": "https://prprive.com",
@@ -733,7 +733,7 @@ const projects=[
 ];
 const services=[["Estrategia de marketing", "Diagnóstico de marca, posicionamiento, objetivos, planificación de campañas y planes de contenido."], ["Creación & optimización de cuentas", "Configuración de presencia digital, perfiles comerciales, organización de activos y optimización de cuentas."], ["Social media & comunidad", "Gestión de redes, calendarios editoriales, programación, community management y crecimiento de comunidad."], ["Meta Ads & Google Ads", "Campañas para generar leads, compras y visitas; segmentación, retargeting, audiencias similares (lookalike) y optimización de inversión en Meta Ads y Google Ads."], ["Dirección creativa & diseño", "Conceptos de campaña, identidad visual, artes para redes, anuncios, menús, rotulación y materiales impresos."], ["Copywriting & guiones", "Textos de marca, anuncios, guiones para video, mensajes de campaña y contenido que conecta con cada audiencia."], ["Fotografía, video & edición", "Producción de contenido, fotografía de producto, grabación, edición audiovisual y adaptaciones para redes."], ["Email marketing", "Diseño de emails, redacción, segmentación de contactos y campañas de reactivación y comunicación."], ["Medición & resultados", "Reportes, dashboards, análisis de KPI, ROAS y costo por adquisición para orientar las próximas decisiones."], ["Producción de eventos & livestream", "Coordinación de premieres, festivales, activaciones, artistas y suplidores. Producción y transmisiones en vivo."], ["Gestión de cuentas & clientes", "Reuniones con clientes, definición de objetivos, estrategias, planificación, coordinación de equipos y seguimiento de entregables."], ["IA aplicada a marketing & producción", "Uso de inteligencia artificial para investigar, desarrollar conceptos y guiones, crear y editar contenido visual, analizar información y agilizar la planificación y producción de campañas."]];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const results=[["698%", "ROAS para compras digitales", "Equivale a 6.98× · campaña seleccionada"], ["+300%", "Crecimiento de citas", "Julio–septiembre 2026 vs. todo 2025 · equipo"], ["100%", "Ocupación de la sala", "Evento seleccionado · 193 asientos vendidos"], ["+178%", "Crecimiento de comunidad en redes sociales", "Crecimiento acumulado durante la gestión"]];
+const results=[["6.98×", "ROAS para compras digitales", "Campaña seleccionada · septiembre 2026"], ["+300%", "Crecimiento de citas", "Julio–septiembre 2026 vs. todo 2025 · equipo"], ["100%", "Ocupación de la sala", "Evento seleccionado · 193 asientos vendidos"], ["+178%", "Crecimiento de comunidad en redes sociales", "Crecimiento acumulado durante la gestión"]];
 document.querySelector('#resultados').innerHTML=results.map(r=>`<article class="result"><strong>${r[0]}</strong><h3>${r[1]}</h3><p>${r[2]}</p></article>`).join('');
 document.querySelector('.services').innerHTML=services.map((s,i)=>`<article><span>${String(i+1).padStart(2,'0')}</span><h3>${s[0]}</h3><p>${s[1]}</p></article>`).join('');
 const categories=['Todos',...new Set(projects.map(p=>p.category))];
@@ -747,14 +747,61 @@ document.querySelector('.close').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}if(e.target.closest('.case-contact')){dialog.close()}});
 dialog.addEventListener('close',()=>{document.body.classList.remove('modal-open');previousFocus?.focus({preventScroll:true})});
 
-// Keep the moving tool strip under the visitor's control.
-const toolStrip=document.querySelector('.tool-strip');
-const toolPause=document.querySelector('.tool-pause');
-if(toolStrip&&toolPause){
-  toolPause.hidden=false;
-  toolPause.addEventListener('click',()=>{
-    const paused=toolStrip.classList.toggle('is-paused');
-    toolPause.setAttribute('aria-pressed',String(paused));
-    toolPause.textContent=paused?'Reanudar movimiento':'Pausar movimiento';
+// Continuous movement with direct pointer and keyboard control.
+const toolsWindow=document.querySelector('.tools-window');
+const toolsTrack=document.querySelector('.tool-track');
+if(toolsWindow&&toolsTrack){
+  const toolsGroup=toolsTrack.querySelector('.tool-group');
+  const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  let offset=0,loopWidth=0,pointer=null,frame=0,lastTime=0;
+  const render=()=>{
+    if(!loopWidth)return;
+    offset=((offset%loopWidth)+loopWidth)%loopWidth;
+    toolsTrack.style.transform=`translate3d(${-offset}px,0,0)`;
+  };
+  const measure=()=>{loopWidth=toolsGroup.getBoundingClientRect().width;render();};
+  const tick=time=>{
+    if(lastTime&&!pointer)offset+=36*Math.min(time-lastTime,64)/1000;
+    lastTime=time;
+    render();
+    frame=requestAnimationFrame(tick);
+  };
+  const updateMotion=()=>{
+    cancelAnimationFrame(frame);
+    lastTime=0;
+    if(!reducedMotion.matches)frame=requestAnimationFrame(tick);
+  };
+  toolsWindow.classList.add('is-draggable');
+  toolsWindow.addEventListener('pointerdown',event=>{
+    if(pointer||(event.pointerType==='mouse'&&event.button!==0))return;
+    pointer={id:event.pointerId,x:event.clientX,offset};
+    toolsWindow.setPointerCapture(event.pointerId);
+    toolsWindow.classList.add('is-dragging');
+    if(event.pointerType==='mouse')event.preventDefault();
   });
+  toolsWindow.addEventListener('pointermove',event=>{
+    if(!pointer||pointer.id!==event.pointerId)return;
+    offset=pointer.offset-(event.clientX-pointer.x);
+    render();
+  });
+  const release=event=>{
+    if(!pointer||pointer.id!==event.pointerId)return;
+    pointer=null;
+    lastTime=0;
+    toolsWindow.classList.remove('is-dragging');
+    if(toolsWindow.hasPointerCapture(event.pointerId))toolsWindow.releasePointerCapture(event.pointerId);
+  };
+  ['pointerup','pointercancel','lostpointercapture'].forEach(type=>toolsWindow.addEventListener(type,release));
+  toolsWindow.addEventListener('dragstart',event=>event.preventDefault());
+  toolsWindow.addEventListener('keydown',event=>{
+    if(!['ArrowLeft','ArrowRight','Home'].includes(event.key))return;
+    event.preventDefault();
+    offset=event.key==='Home'?0:offset+(event.key==='ArrowRight'?120:-120);
+    render();
+  });
+  reducedMotion.addEventListener('change',updateMotion);
+  const toolsResizeObserver=new ResizeObserver(measure);
+  toolsResizeObserver.observe(toolsGroup);
+  measure();
+  updateMotion();
 }
