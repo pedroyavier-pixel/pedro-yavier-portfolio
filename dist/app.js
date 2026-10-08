@@ -730,18 +730,106 @@ const projects=[
 const services=[["Estrategia de marketing", "Diagnóstico de marca, posicionamiento, objetivos, planificación de campañas y planes de contenido."], ["Creación & optimización de cuentas", "Configuración de presencia digital, perfiles comerciales, organización de activos y optimización de cuentas."], ["Social media & comunidad", "Gestión de redes, calendarios editoriales, programación, community management y crecimiento de comunidad."], ["Meta Ads & Google Ads", "Campañas para generar leads, compras y visitas; segmentación, retargeting, audiencias similares (lookalike) y optimización de inversión en Meta Ads y Google Ads."], ["Dirección creativa & diseño", "Conceptos de campaña, identidad visual, artes para redes, anuncios, menús, rotulación y materiales impresos."], ["Copywriting & guiones", "Textos de marca, anuncios, guiones para video, mensajes de campaña y contenido que conecta con cada audiencia."], ["Fotografía, video & edición", "Producción de contenido, fotografía de producto, grabación, edición audiovisual y adaptaciones para redes."], ["Email marketing", "Diseño de emails, redacción, segmentación de contactos y campañas de reactivación y comunicación."], ["Medición & resultados", "Reportes, dashboards, análisis de KPI, ROAS y costo por adquisición para orientar las próximas decisiones."], ["Producción de eventos & livestream", "Coordinación de premieres, festivales, activaciones, artistas y suplidores. Producción y transmisiones en vivo."], ["Gestión de cuentas & clientes", "Reuniones con clientes, definición de objetivos, estrategias, planificación, coordinación de equipos y seguimiento de entregables."], ["IA aplicada a marketing & producción", "Uso de inteligencia artificial para investigar, desarrollar conceptos y guiones, crear y editar contenido visual, analizar información y agilizar la planificación y producción de campañas."]];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const results=[["6.98×", "ROAS para compras digitales", "Campaña seleccionada · septiembre 2026"], ["+300%", "Crecimiento de citas", "Julio–septiembre 2026 vs. todo 2025 · equipo"], ["100%", "Ocupación de la sala", "Campañas para eventos · presupuesto optimizado"], ["+178%", "Crecimiento de comunidad en redes sociales", "Crecimiento acumulado durante la gestión"]];
-document.querySelector('#resultados').innerHTML=results.map(r=>`<article class="result"><strong>${r[0]}</strong><h3>${r[1]}</h3><p>${r[2]}</p></article>`).join('');
-document.querySelector('.services').innerHTML=services.map((s,i)=>`<article><span>${String(i+1).padStart(2,'0')}</span><h3>${s[0]}</h3><p>${s[1]}</p></article>`).join('');
+const translations=window.portfolioTranslations;
+const spanishUi={viewProject:'Ver proyecto:',viewCase:'Ver caso',closeProject:'Cerrar proyecto',role:'Mi rol en el proyecto',impact:'El impacto',gallery:'Una mirada al trabajo',enlarge:'Ampliar:',brand:'Conoce la marca:',projectContact:'Hablemos de tu proyecto',fallbackRole:'Estrategia y comunicación',languageLabel:'Elegir idioma'};
+const staticCopy=Object.entries(translations?.static||{}).map(([selector,en])=>({element:document.querySelector(selector),en})).filter(x=>x.element).map(x=>({...x,es:x.element.innerHTML}));
+const attributeCopy=(translations?.attributes||[]).map(([selector,attribute,en])=>({element:document.querySelector(selector),attribute,en})).filter(x=>x.element).map(x=>({...x,es:x.element.getAttribute(x.attribute)}));
+const spanishTitle=document.title;
+const descriptionElement=document.querySelector('meta[name="description"]');
+const spanishDescription=descriptionElement.content;
+const requestedLanguage=new URL(location.href).searchParams.get('lang');
+let storedLanguage;
+try{storedLanguage=localStorage.getItem('pedro-yavier-language');}catch{}
+let language=translations&&[requestedLanguage,storedLanguage].find(value=>value==='en'||value==='es')||'es';
+let selectedCategory='Todos';
+let currentProjectId=null;
+let previousProjectId=null;
+let previousFocus;
+const dialog=document.querySelector('#case-dialog');
 const categories=['Todos',...new Set(projects.map(p=>p.category))];
-document.querySelector('.filters').innerHTML=categories.map((c,i)=>`<button type="button" aria-pressed="${i===0}" data-filter="${c}">${c}</button>`).join('');
-document.querySelector('#projects').innerHTML=projects.map((p,i)=>`<article class="project-card" data-category="${p.category}"><button type="button" class="project-button" data-project="${p.id}" aria-haspopup="dialog" aria-label="Ver proyecto: ${esc(p.name)}"><div class="project-visual ${p.thumbnailFill?'thumbnail-fill':p.thumbnail?'thumbnail-logo':p.visual}"${p.thumbnailBackground?` style="background:${p.thumbnailBackground}"`:""}>${(p.thumbnail||p.image)?`<img src="assets/${p.thumbnail||p.image}" alt="${esc(p.name)}" loading="lazy" width="800" height="450">`:`<span class="project-number">${String(i+1).padStart(2,'0')}</span><span class="brand-name">${p.name}</span><span class="brand-sub">${p.brandSub}</span>`}${p.badge?`<span class="case-tag">${p.badge}</span>`:''}</div><div class="project-meta"><div><h3>${p.name}</h3><p>${p.subtitle}</p></div><span class="open-label">Ver caso</span></div></button></article>`).join('');
-document.querySelector('.filters').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;document.querySelectorAll('[data-filter]').forEach(el=>el.setAttribute('aria-pressed',String(el===b)));document.querySelectorAll('.project-card').forEach(el=>{el.hidden=b.dataset.filter!=='Todos'&&el.dataset.category!==b.dataset.filter;if(!el.hidden){el.classList.remove('fade-in');void el.offsetWidth;el.classList.add('fade-in')}})});
-const dialog=document.querySelector('#case-dialog');let previousFocus;
-function openProject(id){const p=projects.find(p=>p.id===id);if(!p)return;previousFocus=document.activeElement;document.querySelector('#case-content').innerHTML=`${p.image?`<div class="case-hero"><img src="assets/${p.image}" alt="${esc(p.name)}"></div>`:''}<div class="case-body">${p.imageCredit?`<p class="image-credit">${p.imageCredit}</p>`:''}<p class="eyebrow">${p.category.toUpperCase()} / ${p.period}</p><h2 id="case-title">${p.name}</h2><p class="case-role">${p.role||'Estrategia y comunicación'}</p><p class="lead">${p.headline}</p><p class="lead">${p.summary}</p>${p.stats.length?`<div class="case-stats">${p.stats.map(s=>`<div><strong>${s[0]}</strong><span>${s[1]}</span></div>`).join('')}</div>`:''}<div class="case-details"><div><h3>Mi rol en el proyecto</h3><ul>${p.work.map(w=>`<li>${w}</li>`).join('')}</ul></div><div><h3>El impacto</h3><p>${p.impact}</p></div></div>${p.gallery.length?`<h3 class="gallery-title">${p.galleryLabel||'Una mirada al trabajo'}</h3><div class="gallery">${p.gallery.map(g=>`<figure><a href="assets/${g[0]}" target="_blank" rel="noopener noreferrer" aria-label="Ampliar: ${esc(g[1])}"><img src="assets/${g[0]}" alt="${esc(g[1])}" loading="lazy"></a><figcaption>${g[1]}</figcaption></figure>`).join('')}</div>`:''}${p.note?`<p class="case-note">${p.note}</p>`:''}${p.source?`<p class="case-note">Conoce la marca: <a href="${p.source}" target="_blank" rel="noopener noreferrer"><u>${p.name}</u></a></p>`:''}<a class="pill dark case-contact" href="mailto:pedroyavier@gmail.com">Hablemos de tu proyecto</a></div>`;dialog.showModal();dialog.scrollTop=0;document.body.classList.add('modal-open');}
-document.querySelector('#projects').addEventListener('click',e=>{const b=e.target.closest('[data-project]');if(b)openProject(b.dataset.project)});
+const ui=()=>language==='en'?translations.ui:spanishUi;
+const categoryLabel=category=>language==='en'?translations.categories[category]:category;
+function localizedProject(project){
+  if(language==='es')return project;
+  const english=translations.projects[project.id];
+  return {...project,...english,category:categoryLabel(project.category),gallery:project.gallery.map(([file],index)=>[file,english.captions[index]])};
+}
+function applyFilter(){
+  document.querySelectorAll('.project-card').forEach(element=>{element.hidden=selectedCategory!=='Todos'&&element.dataset.category!==selectedCategory;});
+}
+function renderPage(){
+  const english=language==='en';
+  const labels=ui();
+  document.documentElement.lang=language;
+  document.title=english?translations.title:spanishTitle;
+  descriptionElement.content=english?translations.description:spanishDescription;
+  staticCopy.forEach(({element,es,en})=>{element.innerHTML=english?en:es;});
+  attributeCopy.forEach(({element,attribute,es,en})=>{element.setAttribute(attribute,english?en:es);});
+  const currentResults=english?translations.results:results;
+  const currentServices=english?translations.services:services;
+  document.querySelector('#resultados').innerHTML=currentResults.map(result=>`<article class="result"><strong>${esc(result[0])}</strong><h3>${esc(result[1])}</h3><p>${esc(result[2])}</p></article>`).join('');
+  document.querySelector('.services').innerHTML=currentServices.map((service,index)=>`<article><span>${String(index+1).padStart(2,'0')}</span><h3>${esc(service[0])}</h3><p>${esc(service[1])}</p></article>`).join('');
+  document.querySelector('.filters').innerHTML=categories.map(category=>`<button type="button" aria-pressed="${category===selectedCategory}" data-filter="${esc(category)}">${esc(categoryLabel(category))}</button>`).join('');
+  document.querySelector('#projects').innerHTML=projects.map((original,index)=>{
+    const project=localizedProject(original);
+    return `<article class="project-card" data-category="${esc(original.category)}"><button type="button" class="project-button" data-project="${project.id}" aria-haspopup="dialog" aria-label="${esc(labels.viewProject)} ${esc(project.name)}"><div class="project-visual ${project.thumbnailFill?'thumbnail-fill':project.thumbnail?'thumbnail-logo':project.visual}"${project.thumbnailBackground?` style="background:${project.thumbnailBackground}"`:''}>${(project.thumbnail||project.image)?`<img src="assets/${project.thumbnail||project.image}" alt="${esc(project.name)}" loading="lazy" width="800" height="450">`:`<span class="project-number">${String(index+1).padStart(2,'0')}</span><span class="brand-name">${esc(project.name)}</span><span class="brand-sub">${esc(project.brandSub)}</span>`}${project.badge?`<span class="case-tag">${esc(project.badge)}</span>`:''}</div><div class="project-meta"><div><h3>${esc(project.name)}</h3><p>${esc(project.subtitle)}</p></div><span class="open-label">${esc(labels.viewCase)}</span></div></button></article>`;
+  }).join('');
+  applyFilter();
+  document.querySelectorAll('.language-switcher').forEach(group=>group.setAttribute('aria-label',labels.languageLabel));
+  document.querySelectorAll('[data-language]').forEach(button=>{
+    button.setAttribute('aria-pressed',String(button.dataset.language===language));
+    button.disabled=button.dataset.language==='en'&&!translations;
+  });
+  if(dialog.open&&currentProjectId){const scroll=dialog.scrollTop;renderCase(currentProjectId);dialog.scrollTop=scroll;}
+}
+function renderCase(id){
+  const original=projects.find(project=>project.id===id);
+  if(!original)return;
+  const project=localizedProject(original);
+  const labels=ui();
+  document.querySelector('#case-content').innerHTML=`${project.image?`<div class="case-hero"><img src="assets/${project.image}" alt="${esc(project.name)}"></div>`:''}<div class="case-body">${project.imageCredit?`<p class="image-credit">${esc(project.imageCredit)}</p>`:''}<p class="eyebrow">${esc(project.category.toUpperCase())} / ${esc(project.period)}</p><h2 id="case-title">${esc(project.name)}</h2><p class="case-role">${esc(project.role||labels.fallbackRole)}</p><p class="lead">${esc(project.headline)}</p><p class="lead">${esc(project.summary)}</p>${project.stats.length?`<div class="case-stats">${project.stats.map(stat=>`<div><strong>${esc(stat[0])}</strong><span>${esc(stat[1])}</span></div>`).join('')}</div>`:''}<div class="case-details"><div><h3>${esc(labels.role)}</h3><ul>${project.work.map(work=>`<li>${esc(work)}</li>`).join('')}</ul></div><div><h3>${esc(labels.impact)}</h3><p>${esc(project.impact)}</p></div></div>${project.gallery.length?`<h3 class="gallery-title">${esc(project.galleryLabel||labels.gallery)}</h3><div class="gallery">${project.gallery.map(([file,caption])=>`<figure><a href="assets/${file}" target="_blank" rel="noopener noreferrer" aria-label="${esc(labels.enlarge)} ${esc(caption)}"><img src="assets/${file}" alt="${esc(caption)}" loading="lazy"></a><figcaption>${esc(caption)}</figcaption></figure>`).join('')}</div>`:''}${project.note?`<p class="case-note">${esc(project.note)}</p>`:''}${project.source?`<p class="case-note">${esc(labels.brand)} <a href="${project.source}" target="_blank" rel="noopener noreferrer"><u>${esc(project.name)}</u></a></p>`:''}<a class="pill dark case-contact" href="mailto:pedroyavier@gmail.com">${esc(labels.projectContact)}</a></div>`;
+}
+function openProject(id){
+  if(!projects.some(project=>project.id===id))return;
+  currentProjectId=id;
+  previousProjectId=id;
+  previousFocus=document.activeElement;
+  renderCase(id);
+  dialog.showModal();
+  dialog.scrollTop=0;
+  document.body.classList.add('modal-open');
+}
+function setLanguage(nextLanguage){
+  if(!['es','en'].includes(nextLanguage)||nextLanguage===language||!translations)return;
+  language=nextLanguage;
+  try{localStorage.setItem('pedro-yavier-language',language);}catch{}
+  const url=new URL(location.href);
+  url.searchParams.set('lang',language);
+  history.replaceState(null,'',url);
+  renderPage();
+  document.querySelector('#language-announcement').textContent=language==='en'?'Language: English':'Idioma: Español';
+}
+document.addEventListener('click',event=>{const button=event.target.closest('[data-language]');if(button)setLanguage(button.dataset.language);});
+document.querySelector('.filters').addEventListener('click',event=>{
+  const button=event.target.closest('[data-filter]');
+  if(!button)return;
+  selectedCategory=button.dataset.filter;
+  document.querySelectorAll('[data-filter]').forEach(element=>element.setAttribute('aria-pressed',String(element===button)));
+  applyFilter();
+});
+document.querySelector('#projects').addEventListener('click',event=>{const button=event.target.closest('[data-project]');if(button)openProject(button.dataset.project);});
 document.querySelector('.close').addEventListener('click',()=>dialog.close());
-dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}if(e.target.closest('.case-contact')){dialog.close()}});
-dialog.addEventListener('close',()=>{document.body.classList.remove('modal-open');previousFocus?.focus({preventScroll:true})});
+dialog.addEventListener('click',event=>{
+  if(event.target===dialog){const bounds=dialog.getBoundingClientRect();if(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)dialog.close();}
+  if(event.target.closest('.case-contact'))dialog.close();
+});
+dialog.addEventListener('close',()=>{
+  document.body.classList.remove('modal-open');
+  currentProjectId=null;
+  const focus=previousFocus?.isConnected?previousFocus:document.querySelector(`[data-project="${previousProjectId}"]`);
+  if(focus&&!focus.closest('[hidden]'))focus.focus({preventScroll:true});
+});
+renderPage();
 
 // Continuous movement with direct pointer and keyboard control.
 const toolsWindow=document.querySelector('.tools-window');
